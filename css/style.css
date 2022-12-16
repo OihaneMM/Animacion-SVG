@@ -5,22 +5,23 @@
 }
 
 .svg{
-    width: 500px;
+    width: 600px;
+    margin: 30px auto;
+    display: block;
+    outline: 4px solid black;
 }
 
-#globo{
-    transform: scale(.2);
-    transform-origin: top right;
-    animation: animate 2s 3s forwards ;
+#telefono{
+    animation: rotate 2s infinite alternate;
+    transform-origin: center;
 }
 
-#fondo{
-    transform: translate(-100%);
-    animation: animate 3s forwards ;
-}
+@keyframes rotate{
+    0%{
+        transform: rotate(0) scale(1);
+    }
 
-@keyframes animate{
-    to{
-        transform: unset;
+    100%{
+        transform: rotate(360deg) scale(.4);
     }
 }
